@@ -2,7 +2,7 @@
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
   <file name="AuthController.php" path="/Http/Controllers/Api">
     <totals>
-      <lines total="59" comments="7" code="52" executable="23" executed="23" percent="100.00"/>
+      <lines total="56" comments="5" code="51" executable="23" executed="23" percent="100.00"/>
       <methods count="2" tested="2" percent="100.00"/>
       <functions count="0" tested="0" percent="0"/>
       <classes count="1" tested="1" percent="100.00"/>
@@ -10,19 +10,60 @@
     </totals>
     <class name="App\Http\Controllers\Api\AuthController" start="11" executable="23" executed="23" crap="3">
       <namespace name="App\Http\Controllers\Api"/>
-      <method name="__construct" signature="__construct(App\Actions\Contracts\AuthUserActionInterface $authUserAction)" start="18" end="21" crap="1" executable="1" executed="1" coverage="100"/>
-      <method name="__invoke" signature="__invoke(App\Http\Requests\Api\AuthRequest $request)" start="27" end="57" crap="2" executable="22" executed="22" coverage="100"/>
+      <method name="__construct" signature="__construct(App\Actions\Contracts\AuthUserActionInterface $authUserAction)" start="15" end="18" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="__invoke" signature="__invoke(App\Http\Requests\Api\AuthRequest $request)" start="25" end="54" crap="2" executable="22" executed="22" coverage="100"/>
     </class>
     <coverage>
-      <line nr="20">
+      <line nr="17">
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
       </line>
-      <line nr="30">
+      <line nr="28">
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
+      </line>
+      <line nr="32">
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
+      </line>
+      <line nr="35">
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
+      </line>
+      <line nr="36">
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
+      </line>
+      <line nr="30">
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
+      </line>
+      <line nr="41">
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
+      </line>
+      <line nr="42">
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
+      </line>
+      <line nr="45">
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
+      </line>
+      <line nr="47">
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
+      </line>
+      <line nr="43">
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
+      </line>
+      <line nr="52">
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
+      </line>
+      <line nr="31">
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
+      </line>
+      <line nr="33">
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
       </line>
       <line nr="34">
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
@@ -33,21 +74,10 @@
       <line nr="38">
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
       </line>
-      <line nr="32">
+      <line nr="39">
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
       </line>
-      <line nr="43">
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
-      </line>
-      <line nr="45">
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
-      </line>
-      <line nr="48">
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
-      </line>
-      <line nr="50">
+      <line nr="44">
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
       </line>
@@ -55,29 +85,7 @@
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
       </line>
-      <line nr="55">
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
-      </line>
-      <line nr="33">
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
-      </line>
-      <line nr="35">
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
-      </line>
-      <line nr="36">
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
-      </line>
-      <line nr="39">
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
-      </line>
-      <line nr="40">
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
-      </line>
-      <line nr="41">
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
-      </line>
-      <line nr="47">
+      <line nr="48">
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
       </line>
@@ -85,15 +93,7 @@
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
       </line>
-      <line nr="51">
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
-      </line>
-      <line nr="52">
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
-      </line>
-      <line nr="53">
+      <line nr="50">
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
       </line>
@@ -165,16 +165,6 @@
       <line no="14"/>
       <line no="15">
         <token name="T_WHITESPACE">    </token>
-        <token name="T_DOC_COMMENT">/**</token>
-      </line>
-      <line no="16">
-        <token name="T_DOC_COMMENT">     * @param  AuthUserActionInterface  $authUserAction</token>
-      </line>
-      <line no="17">
-        <token name="T_DOC_COMMENT">     */</token>
-      </line>
-      <line no="18">
-        <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_FUNCTION">function</token>
@@ -186,11 +176,11 @@
         <token name="T_VARIABLE">$authUserAction</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="19">
+      <line no="16">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="20">
+      <line no="17">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -201,25 +191,28 @@
         <token name="T_VARIABLE">$authUserAction</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="21">
+      <line no="18">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="22"/>
-      <line no="23">
+      <line no="19"/>
+      <line no="20">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="24">
+      <line no="21">
         <token name="T_DOC_COMMENT">     * Handle the incoming request.</token>
       </line>
-      <line no="25">
+      <line no="22">
+        <token name="T_DOC_COMMENT">     *</token>
+      </line>
+      <line no="23">
         <token name="T_DOC_COMMENT">     * @throws LoginException</token>
       </line>
-      <line no="26">
+      <line no="24">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="27">
+      <line no="25">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -232,17 +225,17 @@
         <token name="T_VARIABLE">$request</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="28">
+      <line no="26">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="29">
+      <line no="27">
         <token name="T_WHITESPACE">        </token>
         <token name="T_TRY">try</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="30">
+      <line no="28">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$token</token>
         <token name="T_WHITESPACE"> </token>
@@ -262,8 +255,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="31"/>
-      <line no="32">
+      <line no="29"/>
+      <line no="30">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$response</token>
         <token name="T_WHITESPACE"> </token>
@@ -271,7 +264,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_SQUARE">[</token>
       </line>
-      <line no="33">
+      <line no="31">
         <token name="T_WHITESPACE">                </token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'meta'</token>
         <token name="T_WHITESPACE"> </token>
@@ -279,37 +272,37 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_SQUARE">[</token>
       </line>
-      <line no="34">
+      <line no="32">
         <token name="T_WHITESPACE">                    </token>
-        <token name="T_CONSTANT_ENCAPSED_STRING">"success"</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'success'</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_DOUBLE_ARROW">=&gt;</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">true</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="35">
+      <line no="33">
         <token name="T_WHITESPACE">                    </token>
-        <token name="T_CONSTANT_ENCAPSED_STRING">"errors"</token>
-        <token name="T_WHITESPACE">  </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'errors'</token>
+        <token name="T_WHITESPACE"> </token>
         <token name="T_DOUBLE_ARROW">=&gt;</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_SQUARE">[</token>
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="36">
+      <line no="34">
         <token name="T_WHITESPACE">                    </token>
-        <token name="T_CONSTANT_ENCAPSED_STRING">"data"</token>
-        <token name="T_WHITESPACE">    </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'data'</token>
+        <token name="T_WHITESPACE"> </token>
         <token name="T_DOUBLE_ARROW">=&gt;</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_SQUARE">[</token>
       </line>
-      <line no="37">
+      <line no="35">
         <token name="T_WHITESPACE">                        </token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'token'</token>
-        <token name="T_WHITESPACE">             </token>
+        <token name="T_WHITESPACE"> </token>
         <token name="T_DOUBLE_ARROW">=&gt;</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$token</token>
@@ -317,7 +310,7 @@
         <token name="T_STRING">accessToken</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="38">
+      <line no="36">
         <token name="T_WHITESPACE">                        </token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'minutes_to_expire'</token>
         <token name="T_WHITESPACE"> </token>
@@ -337,23 +330,23 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="39">
+      <line no="37">
         <token name="T_WHITESPACE">                    </token>
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="40">
+      <line no="38">
         <token name="T_WHITESPACE">                </token>
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="41">
+      <line no="39">
         <token name="T_WHITESPACE">            </token>
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="42"/>
-      <line no="43">
+      <line no="40"/>
+      <line no="41">
         <token name="T_WHITESPACE">            </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -368,8 +361,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="44"/>
-      <line no="45">
+      <line no="42">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
         <token name="T_WHITESPACE"> </token>
@@ -383,7 +375,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="46">
+      <line no="43">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$response</token>
         <token name="T_WHITESPACE"> </token>
@@ -391,7 +383,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_SQUARE">[</token>
       </line>
-      <line no="47">
+      <line no="44">
         <token name="T_WHITESPACE">                </token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'meta'</token>
         <token name="T_WHITESPACE"> </token>
@@ -399,24 +391,24 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_SQUARE">[</token>
       </line>
-      <line no="48">
+      <line no="45">
         <token name="T_WHITESPACE">                    </token>
-        <token name="T_CONSTANT_ENCAPSED_STRING">"success"</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'success'</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_DOUBLE_ARROW">=&gt;</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">false</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="49">
+      <line no="46">
         <token name="T_WHITESPACE">                    </token>
-        <token name="T_CONSTANT_ENCAPSED_STRING">"errors"</token>
-        <token name="T_WHITESPACE">  </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'errors'</token>
+        <token name="T_WHITESPACE"> </token>
         <token name="T_DOUBLE_ARROW">=&gt;</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_SQUARE">[</token>
       </line>
-      <line no="50">
+      <line no="47">
         <token name="T_WHITESPACE">                        </token>
         <token name="T_VARIABLE">$exception</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -425,23 +417,23 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="51">
+      <line no="48">
         <token name="T_WHITESPACE">                    </token>
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="52">
+      <line no="49">
         <token name="T_WHITESPACE">                </token>
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="53">
+      <line no="50">
         <token name="T_WHITESPACE">            </token>
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="54"/>
-      <line no="55">
+      <line no="51"/>
+      <line no="52">
         <token name="T_WHITESPACE">            </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -458,18 +450,18 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="56">
+      <line no="53">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="57">
+      <line no="54">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="58">
+      <line no="55">
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="59"/>
+      <line no="56"/>
     </source>
   </file>
 </phpunit>

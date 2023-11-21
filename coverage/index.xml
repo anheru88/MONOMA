@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
-  <build time="Tue Nov 21 22:24:18 UTC 2023" phpunit="10.4.2" coverage="10.1.8">
+  <build time="Tue Nov 21 22:38:37 UTC 2023" phpunit="10.4.2" coverage="10.1.8">
     <runtime name="PHP" version="8.2.10" url="https://www.php.net/"/>
     <driver name="pcov" version="1.0.11"/>
   </build>
@@ -19,7 +19,7 @@
     </tests>
     <directory name="/">
       <totals>
-        <lines total="943" comments="281" code="662" executable="81" executed="68" percent="83.95"/>
+        <lines total="914" comments="256" code="658" executable="81" executed="68" percent="83.95"/>
         <methods count="27" tested="21" percent="77.78"/>
         <functions count="0" tested="0" percent="0"/>
         <classes count="18" tested="12" percent="66.67"/>
@@ -27,7 +27,7 @@
       </totals>
       <directory name="Actions">
         <totals>
-          <lines total="64" comments="13" code="51" executable="10" executed="10" percent="100.00"/>
+          <lines total="56" comments="6" code="50" executable="10" executed="10" percent="100.00"/>
           <methods count="2" tested="2" percent="100.00"/>
           <functions count="0" tested="0" percent="0"/>
           <classes count="1" tested="1" percent="100.00"/>
@@ -35,7 +35,7 @@
         </totals>
         <directory name="Contracts">
           <totals>
-            <lines total="17" comments="5" code="12" executable="0" executed="0" percent="0"/>
+            <lines total="15" comments="3" code="12" executable="0" executed="0" percent="0"/>
             <methods count="0" tested="0" percent="0"/>
             <functions count="0" tested="0" percent="0"/>
             <classes count="0" tested="0" percent="0"/>
@@ -43,7 +43,7 @@
           </totals>
           <file name="AuthUserActionInterface.php" href="Actions/Contracts/AuthUserActionInterface.php.xml">
             <totals>
-              <lines total="17" comments="5" code="12" executable="0" executed="0" percent="0"/>
+              <lines total="15" comments="3" code="12" executable="0" executed="0" percent="0"/>
               <methods count="0" tested="0" percent="0"/>
               <functions count="0" tested="0" percent="0"/>
               <classes count="0" tested="0" percent="0"/>
@@ -53,7 +53,7 @@
         </directory>
         <file name="AuthUserAction.php" href="Actions/AuthUserAction.php.xml">
           <totals>
-            <lines total="47" comments="8" code="39" executable="10" executed="10" percent="100.00"/>
+            <lines total="41" comments="3" code="38" executable="10" executed="10" percent="100.00"/>
             <methods count="2" tested="2" percent="100.00"/>
             <functions count="0" tested="0" percent="0"/>
             <classes count="1" tested="1" percent="100.00"/>
@@ -81,7 +81,7 @@
       </directory>
       <directory name="Exceptions">
         <totals>
-          <lines total="52" comments="15" code="37" executable="3" executed="3" percent="100.00"/>
+          <lines total="49" comments="12" code="37" executable="3" executed="3" percent="100.00"/>
           <methods count="2" tested="2" percent="100.00"/>
           <functions count="0" tested="0" percent="0"/>
           <classes count="2" tested="2" percent="100.00"/>
@@ -98,7 +98,7 @@
         </file>
         <file name="LoginException.php" href="Exceptions/LoginException.php.xml">
           <totals>
-            <lines total="21" comments="6" code="15" executable="1" executed="1" percent="100.00"/>
+            <lines total="18" comments="3" code="15" executable="1" executed="1" percent="100.00"/>
             <methods count="1" tested="1" percent="100.00"/>
             <functions count="0" tested="0" percent="0"/>
             <classes count="1" tested="1" percent="100.00"/>
@@ -108,7 +108,7 @@
       </directory>
       <directory name="Http">
         <totals>
-          <lines total="379" comments="86" code="293" executable="37" executed="27" percent="72.97"/>
+          <lines total="376" comments="84" code="292" executable="37" executed="27" percent="72.97"/>
           <methods count="7" tested="3" percent="42.86"/>
           <functions count="0" tested="0" percent="0"/>
           <classes count="6" tested="2" percent="33.33"/>
@@ -116,7 +116,7 @@
         </totals>
         <directory name="Controllers">
           <totals>
-            <lines total="72" comments="7" code="65" executable="23" executed="23" percent="100.00"/>
+            <lines total="69" comments="5" code="64" executable="23" executed="23" percent="100.00"/>
             <methods count="2" tested="2" percent="100.00"/>
             <functions count="0" tested="0" percent="0"/>
             <classes count="1" tested="1" percent="100.00"/>
@@ -124,7 +124,7 @@
           </totals>
           <directory name="Api">
             <totals>
-              <lines total="59" comments="7" code="52" executable="23" executed="23" percent="100.00"/>
+              <lines total="56" comments="5" code="51" executable="23" executed="23" percent="100.00"/>
               <methods count="2" tested="2" percent="100.00"/>
               <functions count="0" tested="0" percent="0"/>
               <classes count="1" tested="1" percent="100.00"/>
@@ -132,7 +132,7 @@
             </totals>
             <file name="AuthController.php" href="Http/Controllers/Api/AuthController.php.xml">
               <totals>
-                <lines total="59" comments="7" code="52" executable="23" executed="23" percent="100.00"/>
+                <lines total="56" comments="5" code="51" executable="23" executed="23" percent="100.00"/>
                 <methods count="2" tested="2" percent="100.00"/>
                 <functions count="0" tested="0" percent="0"/>
                 <classes count="1" tested="1" percent="100.00"/>
@@ -297,7 +297,7 @@
       </directory>
       <directory name="Models">
         <totals>
-          <lines total="121" comments="78" code="43" executable="0" executed="0" percent="0"/>
+          <lines total="127" comments="82" code="45" executable="0" executed="0" percent="0"/>
           <methods count="0" tested="0" percent="0"/>
           <functions count="0" tested="0" percent="0"/>
           <classes count="0" tested="0" percent="0"/>
@@ -305,7 +305,7 @@
         </totals>
         <file name="Applicant.php" href="Models/Applicant.php.xml">
           <totals>
-            <lines total="35" comments="23" code="12" executable="0" executed="0" percent="0"/>
+            <lines total="37" comments="25" code="12" executable="0" executed="0" percent="0"/>
             <methods count="0" tested="0" percent="0"/>
             <functions count="0" tested="0" percent="0"/>
             <classes count="0" tested="0" percent="0"/>
@@ -314,7 +314,7 @@
         </file>
         <file name="User.php" href="Models/User.php.xml">
           <totals>
-            <lines total="86" comments="55" code="31" executable="0" executed="0" percent="0"/>
+            <lines total="90" comments="57" code="33" executable="0" executed="0" percent="0"/>
             <methods count="0" tested="0" percent="0"/>
             <functions count="0" tested="0" percent="0"/>
             <classes count="0" tested="0" percent="0"/>
@@ -396,7 +396,7 @@
       </directory>
       <directory name="Repositories">
         <totals>
-          <lines total="80" comments="26" code="54" executable="5" executed="5" percent="100.00"/>
+          <lines total="59" comments="9" code="50" executable="5" executed="5" percent="100.00"/>
           <methods count="3" tested="3" percent="100.00"/>
           <functions count="0" tested="0" percent="0"/>
           <classes count="1" tested="1" percent="100.00"/>
@@ -404,7 +404,7 @@
         </totals>
         <directory name="Contracts">
           <totals>
-            <lines total="26" comments="9" code="17" executable="0" executed="0" percent="0"/>
+            <lines total="19" comments="3" code="16" executable="0" executed="0" percent="0"/>
             <methods count="0" tested="0" percent="0"/>
             <functions count="0" tested="0" percent="0"/>
             <classes count="0" tested="0" percent="0"/>
@@ -412,7 +412,7 @@
           </totals>
           <file name="UserRepositoryInterface.php" href="Repositories/Contracts/UserRepositoryInterface.php.xml">
             <totals>
-              <lines total="26" comments="9" code="17" executable="0" executed="0" percent="0"/>
+              <lines total="19" comments="3" code="16" executable="0" executed="0" percent="0"/>
               <methods count="0" tested="0" percent="0"/>
               <functions count="0" tested="0" percent="0"/>
               <classes count="0" tested="0" percent="0"/>
@@ -422,7 +422,7 @@
         </directory>
         <file name="EloquentUserRepository.php" href="Repositories/EloquentUserRepository.php.xml">
           <totals>
-            <lines total="54" comments="17" code="37" executable="5" executed="5" percent="100.00"/>
+            <lines total="40" comments="6" code="34" executable="5" executed="5" percent="100.00"/>
             <methods count="3" tested="3" percent="100.00"/>
             <functions count="0" tested="0" percent="0"/>
             <classes count="1" tested="1" percent="100.00"/>

@@ -2,7 +2,7 @@
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
   <file name="EloquentUserRepository.php" path="/Repositories">
     <totals>
-      <lines total="54" comments="17" code="37" executable="5" executed="5" percent="100.00"/>
+      <lines total="40" comments="6" code="34" executable="5" executed="5" percent="100.00"/>
       <methods count="3" tested="3" percent="100.00"/>
       <functions count="0" tested="0" percent="0"/>
       <classes count="1" tested="1" percent="100.00"/>
@@ -10,12 +10,12 @@
     </totals>
     <class name="App\Repositories\EloquentUserRepository" start="11" executable="5" executed="5" crap="4">
       <namespace name="App\Repositories"/>
-      <method name="__construct" signature="__construct(App\Models\User $user)" start="24" end="27" crap="1" executable="1" executed="1" coverage="100"/>
-      <method name="findByUsername" signature="findByUsername(string $username): App\Models\User" start="34" end="41" crap="2" executable="3" executed="3" coverage="100"/>
-      <method name="createToken" signature="createToken(\App\Models\User|\Illuminate\Contracts\Auth\Authenticatable $user): Laravel\Passport\PersonalAccessTokenResult" start="47" end="50" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="__construct" signature="__construct(App\Models\User $user)" start="18" end="21" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="findByUsername" signature="findByUsername(string $username): App\Models\User" start="26" end="33" crap="2" executable="3" executed="3" coverage="100"/>
+      <method name="createToken" signature="createToken(\App\Models\User|\Illuminate\Contracts\Auth\Authenticatable $user): Laravel\Passport\PersonalAccessTokenResult" start="35" end="38" crap="1" executable="1" executed="1" coverage="100"/>
     </class>
     <coverage>
-      <line nr="26">
+      <line nr="20">
         <covered by="Tests\Unit\Repositories\EloquentUserRepositoryTest::it_can_find_user_by_username"/>
         <covered by="Tests\Unit\Repositories\EloquentUserRepositoryTest::it_throws_model_not_found_exception_if_username_not_found"/>
         <covered by="Tests\Unit\Repositories\EloquentUserRepositoryTest::it_can_create_personal_access_token_for_user"/>
@@ -23,23 +23,23 @@
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
       </line>
-      <line nr="36">
+      <line nr="28">
         <covered by="Tests\Unit\Repositories\EloquentUserRepositoryTest::it_can_find_user_by_username"/>
         <covered by="Tests\Unit\Repositories\EloquentUserRepositoryTest::it_throws_model_not_found_exception_if_username_not_found"/>
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
+        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
+      </line>
+      <line nr="29">
+        <covered by="Tests\Unit\Repositories\EloquentUserRepositoryTest::it_throws_model_not_found_exception_if_username_not_found"/>
+      </line>
+      <line nr="32">
+        <covered by="Tests\Unit\Repositories\EloquentUserRepositoryTest::it_can_find_user_by_username"/>
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
       </line>
       <line nr="37">
-        <covered by="Tests\Unit\Repositories\EloquentUserRepositoryTest::it_throws_model_not_found_exception_if_username_not_found"/>
-      </line>
-      <line nr="40">
-        <covered by="Tests\Unit\Repositories\EloquentUserRepositoryTest::it_can_find_user_by_username"/>
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response"/>
-        <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_handles_login_exception_and_returns_error_response_when_user_is_inactive"/>
-      </line>
-      <line nr="49">
         <covered by="Tests\Unit\Repositories\EloquentUserRepositoryTest::it_can_create_personal_access_token_for_user"/>
         <covered by="Tests\Feature\Controllers\Api\AuthControllerTest::it_returns_token_on_successful_authentication"/>
       </line>
@@ -99,18 +99,7 @@
       <line no="12">
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="13"/>
-      <line no="14">
-        <token name="T_WHITESPACE">    </token>
-        <token name="T_DOC_COMMENT">/**</token>
-      </line>
-      <line no="15">
-        <token name="T_DOC_COMMENT">     * @var User</token>
-      </line>
-      <line no="16">
-        <token name="T_DOC_COMMENT">     */</token>
-      </line>
-      <line no="17">
+      <line no="13">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PRIVATE">private</token>
         <token name="T_WHITESPACE"> </token>
@@ -119,24 +108,18 @@
         <token name="T_VARIABLE">$model</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="18"/>
-      <line no="19">
+      <line no="14"/>
+      <line no="15">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="20">
+      <line no="16">
         <token name="T_DOC_COMMENT">     * EloquentUserRepository constructor.</token>
       </line>
-      <line no="21">
-        <token name="T_DOC_COMMENT">     *</token>
-      </line>
-      <line no="22">
-        <token name="T_DOC_COMMENT">     * @param  User  $user</token>
-      </line>
-      <line no="23">
+      <line no="17">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="24">
+      <line no="18">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -149,11 +132,11 @@
         <token name="T_VARIABLE">$user</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="25">
+      <line no="19">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="26">
+      <line no="20">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -164,28 +147,22 @@
         <token name="T_VARIABLE">$user</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="27">
+      <line no="21">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="28"/>
-      <line no="29">
+      <line no="22"/>
+      <line no="23">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="30">
-        <token name="T_DOC_COMMENT">     * @param  string  $username</token>
-      </line>
-      <line no="31">
-        <token name="T_DOC_COMMENT">     * @return User</token>
-      </line>
-      <line no="32">
+      <line no="24">
         <token name="T_DOC_COMMENT">     * @throws ModelNotFoundException</token>
       </line>
-      <line no="33">
+      <line no="25">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="34">
+      <line no="26">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -201,11 +178,11 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">User</token>
       </line>
-      <line no="35">
+      <line no="27">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="36">
+      <line no="28">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -237,7 +214,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="37">
+      <line no="29">
         <token name="T_WHITESPACE">            </token>
         <token name="T_THROW">throw</token>
         <token name="T_WHITESPACE"> </token>
@@ -255,37 +232,24 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="38">
+      <line no="30">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="39"/>
-      <line no="40">
+      <line no="31"/>
+      <line no="32">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$model</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="41">
+      <line no="33">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="42"/>
-      <line no="43">
-        <token name="T_WHITESPACE">    </token>
-        <token name="T_DOC_COMMENT">/**</token>
-      </line>
-      <line no="44">
-        <token name="T_DOC_COMMENT">     * @param  User|Authenticatable  $user</token>
-      </line>
-      <line no="45">
-        <token name="T_DOC_COMMENT">     * @return PersonalAccessTokenResult</token>
-      </line>
-      <line no="46">
-        <token name="T_DOC_COMMENT">     */</token>
-      </line>
-      <line no="47">
+      <line no="34"/>
+      <line no="35">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -303,11 +267,11 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">PersonalAccessTokenResult</token>
       </line>
-      <line no="48">
+      <line no="36">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="49">
+      <line no="37">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -319,16 +283,14 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="50">
+      <line no="38">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="51"/>
-      <line no="52"/>
-      <line no="53">
+      <line no="39">
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="54"/>
+      <line no="40"/>
     </source>
   </file>
 </phpunit>

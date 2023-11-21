@@ -2,13 +2,13 @@
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
   <file name="Applicant.php" path="/Models">
     <totals>
-      <lines total="35" comments="23" code="12" executable="0" executed="0" percent="0"/>
+      <lines total="37" comments="25" code="12" executable="0" executed="0" percent="0"/>
       <methods count="0" tested="0" percent="0"/>
       <functions count="0" tested="0" percent="0"/>
       <classes count="0" tested="0" percent="0"/>
       <traits count="0" tested="0" percent="0"/>
     </totals>
-    <class name="App\Models\Applicant" start="31" executable="0" executed="0" crap="0">
+    <class name="App\Models\Applicant" start="33" executable="0" executed="0" crap="0">
       <namespace name="App\Models"/>
     </class>
     <source>
@@ -67,45 +67,51 @@
         <token name="T_DOC_COMMENT"> * @property \Illuminate\Support\Carbon|null $updated_at</token>
       </line>
       <line no="18">
-        <token name="T_DOC_COMMENT"> * @method static \Database\Factories\ApplicantFactory factory($count = null, $state = [])</token>
+        <token name="T_DOC_COMMENT"> *</token>
       </line>
       <line no="19">
-        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant newModelQuery()</token>
+        <token name="T_DOC_COMMENT"> * @method static \Database\Factories\ApplicantFactory factory($count = null, $state = [])</token>
       </line>
       <line no="20">
-        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant newQuery()</token>
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant newModelQuery()</token>
       </line>
       <line no="21">
-        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant query()</token>
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant newQuery()</token>
       </line>
       <line no="22">
-        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereCreatedAt($value)</token>
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant query()</token>
       </line>
       <line no="23">
-        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereCreatedBy($value)</token>
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereCreatedAt($value)</token>
       </line>
       <line no="24">
-        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereId($value)</token>
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereCreatedBy($value)</token>
       </line>
       <line no="25">
-        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereName($value)</token>
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereId($value)</token>
       </line>
       <line no="26">
-        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereOwner($value)</token>
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereName($value)</token>
       </line>
       <line no="27">
-        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereSource($value)</token>
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereOwner($value)</token>
       </line>
       <line no="28">
-        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereUpdatedAt($value)</token>
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereSource($value)</token>
       </line>
       <line no="29">
-        <token name="T_DOC_COMMENT"> * @mixin \Eloquent</token>
+        <token name="T_DOC_COMMENT"> * @method static \Illuminate\Database\Eloquent\Builder|Applicant whereUpdatedAt($value)</token>
       </line>
       <line no="30">
-        <token name="T_DOC_COMMENT"> */</token>
+        <token name="T_DOC_COMMENT"> *</token>
       </line>
       <line no="31">
+        <token name="T_DOC_COMMENT"> * @mixin \Eloquent</token>
+      </line>
+      <line no="32">
+        <token name="T_DOC_COMMENT"> */</token>
+      </line>
+      <line no="33">
         <token name="T_CLASS">class</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">Applicant</token>
@@ -114,20 +120,20 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">Model</token>
       </line>
-      <line no="32">
+      <line no="34">
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="33">
+      <line no="35">
         <token name="T_WHITESPACE">    </token>
         <token name="T_USE">use</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">HasFactory</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="34">
+      <line no="36">
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="35"/>
+      <line no="37"/>
     </source>
   </file>
 </phpunit>
