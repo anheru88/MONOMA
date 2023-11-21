@@ -10,16 +10,10 @@ use Laravel\Passport\PersonalAccessTokenResult;
 
 class EloquentUserRepository implements UserRepositoryInterface
 {
-
-    /**
-     * @var User
-     */
     private User $model;
 
     /**
      * EloquentUserRepository constructor.
-     *
-     * @param  User  $user
      */
     public function __construct(User $user)
     {
@@ -27,8 +21,6 @@ class EloquentUserRepository implements UserRepositoryInterface
     }
 
     /**
-     * @param  string  $username
-     * @return User
      * @throws ModelNotFoundException
      */
     public function findByUsername(string $username): User
@@ -40,14 +32,8 @@ class EloquentUserRepository implements UserRepositoryInterface
         return $model;
     }
 
-    /**
-     * @param  User|Authenticatable  $user
-     * @return PersonalAccessTokenResult
-     */
     public function createToken(User|Authenticatable $user): PersonalAccessTokenResult
     {
         return $user->createToken('MY TOKEN');
     }
-
-
 }

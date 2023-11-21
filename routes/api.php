@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('auth', AuthController::class);
+Route::post('auth', AuthController::class)->name('api.auth');

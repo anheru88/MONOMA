@@ -12,9 +12,6 @@ class AuthController extends Controller
 {
     private AuthUserActionInterface $authUserAction;
 
-    /**
-     * @param  AuthUserActionInterface  $authUserAction
-     */
     public function __construct(AuthUserActionInterface $authUserAction)
     {
         $this->authUserAction = $authUserAction;
@@ -22,6 +19,7 @@ class AuthController extends Controller
 
     /**
      * Handle the incoming request.
+     *
      * @throws LoginException
      */
     public function __invoke(AuthRequest $request)
@@ -31,22 +29,21 @@ class AuthController extends Controller
 
             $response = [
                 'meta' => [
-                    "success" => true,
-                    "errors"  => [],
-                    "data"    => [
-                        'token'             => $token->accessToken,
+                    'success' => true,
+                    'errors' => [],
+                    'data' => [
+                        'token' => $token->accessToken,
                         'minutes_to_expire' => $token->token->expires_at->diffInMinutes(now()),
                     ],
                 ],
             ];
 
             return response($response, Response::HTTP_OK);
-
         } catch (\Exception $exception) {
             $response = [
                 'meta' => [
-                    "success" => false,
-                    "errors"  => [
+                    'success' => false,
+                    'errors' => [
                         $exception->getMessage(),
                     ],
                 ],

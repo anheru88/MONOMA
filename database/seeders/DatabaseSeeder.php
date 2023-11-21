@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
                 'username' => 'tester',
                 'password' => 'PASSWORD',
                 'role' => 'manager',
-                'is_active' => true
+                'is_active' => true,
             ]
         );
 
