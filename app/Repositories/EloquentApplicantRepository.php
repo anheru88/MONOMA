@@ -6,6 +6,7 @@ use App\Models\Applicant;
 use App\Models\User;
 use App\Repositories\Contracts\ApplicantRepositoryInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\Cache;
 
 class EloquentApplicantRepository implements ApplicantRepositoryInterface
 {
@@ -41,9 +42,14 @@ class EloquentApplicantRepository implements ApplicantRepositoryInterface
     public function getAll(int $owner = null)
     {
         if (is_null($owner)) {
-            return $this->model->all();
+            return Cache::remember('applicants.getAll', 60, function () {
+                return $this->model->all();
+            });
         }
 
-        return $this->model->where('owner', $owner)->get();
+        return Cache::remember('applicants.'.$owner, 60, function ($owner) {
+            return $this->model->where('owner', $owner)->get();;
+        });
+
     }
 }
