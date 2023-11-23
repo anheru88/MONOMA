@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,10 @@ class ApplicantFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->lastName(),
+            'source' => fake()->country(),
+            'owner' => User::all()->random()->id,
+            'created_by' => User::all()->random()->id,
         ];
     }
 }

@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Repositories\Contracts\ApplicantRepositoryInterface;
 use App\Repositories\Contracts\UserRepositoryInterface;
+use App\Repositories\EloquentApplicantRepository;
 use App\Repositories\EloquentUserRepository;
 use Illuminate\Support\ServiceProvider;
 
@@ -10,6 +12,7 @@ class RepositoryServiceProvider extends ServiceProvider
 {
     private array $providers = [
         UserRepositoryInterface::class => EloquentUserRepository::class,
+        ApplicantRepositoryInterface::class => EloquentApplicantRepository::class,
     ];
 
     /**
