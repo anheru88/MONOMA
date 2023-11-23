@@ -2,45 +2,46 @@
 
 namespace App\Http\Controllers\Api\Applicant;
 
-use App\Actions\Contracts\GetApplicantActionInterface;
+use App\Actions\Contracts\GetAllApplicantsActionInterface;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\ApplicantResource;
+use App\Http\Requests\Api\Applicant\GetAllApplicantsRequest;
+use App\Http\Resources\ApplicantCollection;
 use Symfony\Component\HttpFoundation\Response;
 
-class GetApplicantController extends Controller
+class GetAllApplicantsController extends Controller
 {
-    private GetApplicantActionInterface $getApplicantAction;
+    private GetAllApplicantsActionInterface $getAllApplicantsAction;
 
-    public function __construct(GetApplicantActionInterface $getApplicantAction)
+    public function __construct(GetAllApplicantsActionInterface $getAllApplicantsAction)
     {
-        $this->getApplicantAction = $getApplicantAction;
+        $this->getAllApplicantsAction = $getAllApplicantsAction;
     }
 
     /**
      * Handle the incoming request.
      */
-    public function __invoke(int $id)
+    public function __invoke(GetAllApplicantsRequest $request)
     {
         try {
-            $applicant = $this->getApplicantAction->handler($id);
+
+            $applicants = $this->getAllApplicantsAction->handler(auth()->user());
 
             $response = [
                 'meta' => [
                     'success' => true,
-                    'errors' => [],
-                    'data' => [
-                        new ApplicantResource($applicant),
-                    ],
+                    'errors'  => [],
+                    'data'    => new ApplicantCollection($applicants),
                 ],
             ];
 
             return response($response, Response::HTTP_OK);
 
+
         } catch (\Exception $exception) {
             $response = [
                 'meta' => [
                     'success' => false,
-                    'errors' => [
+                    'errors'  => [
                         $exception->getMessage(),
                     ],
                 ],

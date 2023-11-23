@@ -27,8 +27,6 @@ class EloquentApplicantRepository implements ApplicantRepositoryInterface
     }
 
     /**
-     * @param  int  $id
-     * @return Applicant
      * @throws ModelNotFoundException
      */
     public function find(int $id): Applicant
@@ -36,7 +34,16 @@ class EloquentApplicantRepository implements ApplicantRepositoryInterface
         try {
             return $this->model->findOrFail($id);
         } catch (ModelNotFoundException $e) {
-            throw new ModelNotFoundException("No lead found", 404);
+            throw new ModelNotFoundException('No lead found', 404);
         }
+    }
+
+    public function getAll(int $owner = null)
+    {
+        if (is_null($owner)) {
+            return $this->model->all();
+        }
+
+        return $this->model->where('owner', $owner)->get();
     }
 }

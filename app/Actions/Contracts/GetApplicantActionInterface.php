@@ -4,7 +4,6 @@ namespace App\Actions\Contracts;
 
 use App\Exceptions\LoginException;
 use App\Models\Applicant;
-use App\Models\User;
 
 interface GetApplicantActionInterface
 {

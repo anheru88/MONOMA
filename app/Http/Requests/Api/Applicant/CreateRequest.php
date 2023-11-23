@@ -11,7 +11,11 @@ class CreateRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return auth()->check();
+        if (auth()->check() && auth()->user()->role === 'manager') {
+            return true;
+        }
+
+        return false;
     }
 
     /**

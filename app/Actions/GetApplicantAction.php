@@ -15,7 +15,6 @@ class GetApplicantAction implements GetApplicantActionInterface
         $this->applicantRepository = $applicantRepository;
     }
 
-
     public function handler(int $id): Applicant
     {
         return $this->applicantRepository->find($id);

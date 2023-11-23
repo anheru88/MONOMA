@@ -8,18 +8,12 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 interface ApplicantRepositoryInterface
 {
-
-    /**
-     * @param  array  $data
-     * @param  User  $user
-     * @return Applicant
-     */
     public function create(array $data, User $user): Applicant;
 
     /**
-     * @param  int  $id
-     * @return Applicant
      * @throws ModelNotFoundException
      */
     public function find(int $id): Applicant;
+
+    public function getAll();
 }
