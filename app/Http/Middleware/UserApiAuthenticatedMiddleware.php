@@ -15,7 +15,6 @@ class UserApiAuthenticatedMiddleware
     /**
      * Create a new middleware instance.
      *
-     * @param  \Illuminate\Contracts\Auth\Factory  $auth
      * @return void
      */
     public function __construct(Auth $auth)
@@ -31,14 +30,12 @@ class UserApiAuthenticatedMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         try {
-
             $this->authenticate($request, ['api']);
-
         } catch (AuthenticationException $exception) {
             $response = [
                 'meta' => [
                     'success' => false,
-                    'errors'  => [
+                    'errors' => [
                         $exception->getMessage(),
                     ],
                 ],
@@ -46,7 +43,6 @@ class UserApiAuthenticatedMiddleware
 
             return response($response, $exception->getCode());
         }
-
 
         return $next($request);
     }

@@ -3,12 +3,9 @@
 namespace App\Actions;
 
 use App\Actions\Contracts\CreateApplicantActionInterface;
-use App\Exceptions\LoginException;
 use App\Models\Applicant;
+use App\Models\User;
 use App\Repositories\Contracts\ApplicantRepositoryInterface;
-use App\Repositories\Contracts\UserRepositoryInterface;
-use Laravel\Passport\PersonalAccessTokenResult;
-use Symfony\Component\HttpFoundation\Response;
 
 class CreateApplicantAction implements CreateApplicantActionInterface
 {
@@ -19,8 +16,8 @@ class CreateApplicantAction implements CreateApplicantActionInterface
         $this->applicantRepository = $applicantRepository;
     }
 
-    public function handler(array $data): Applicant
+    public function handler(array $data, User $user): Applicant
     {
-        return $this->applicantRepository->create($data);
+        return $this->applicantRepository->create($data, $user);
     }
 }

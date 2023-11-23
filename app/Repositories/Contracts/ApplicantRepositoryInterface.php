@@ -2,14 +2,10 @@
 
 namespace App\Repositories\Contracts;
 
+use App\Models\Applicant;
 use App\Models\User;
 
 interface ApplicantRepositoryInterface
 {
-
-    /**
-     * @param  array  $data
-     * @return User
-     */
-    public function create(array $data): User;
+    public function create(array $data, User $user): Applicant;
 }

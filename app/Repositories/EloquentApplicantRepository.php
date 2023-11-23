@@ -18,8 +18,10 @@ class EloquentApplicantRepository implements ApplicantRepositoryInterface
         $this->model = $applicant;
     }
 
-    public function create(array $data): User
+    public function create(array $data, User $user): Applicant
     {
+        $data['created_by'] = $user->id;
+
         return $this->model->create($data);
     }
 }
