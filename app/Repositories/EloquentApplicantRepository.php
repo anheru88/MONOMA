@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Models\Applicant;
 use App\Models\User;
 use App\Repositories\Contracts\ApplicantRepositoryInterface;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class EloquentApplicantRepository implements ApplicantRepositoryInterface
 {
@@ -23,5 +24,19 @@ class EloquentApplicantRepository implements ApplicantRepositoryInterface
         $data['created_by'] = $user->id;
 
         return $this->model->create($data);
+    }
+
+    /**
+     * @param  int  $id
+     * @return Applicant
+     * @throws ModelNotFoundException
+     */
+    public function find(int $id): Applicant
+    {
+        try {
+            return $this->model->findOrFail($id);
+        } catch (ModelNotFoundException $e) {
+            throw new ModelNotFoundException("No lead found", 404);
+        }
     }
 }
